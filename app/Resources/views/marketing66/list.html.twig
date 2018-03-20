@@ -1,0 +1,22 @@
+{% extends 'marketing66_base.html.twig' %}
+
+
+{% block body %}
+    <table class="table table-striped" style="background-color: #9C9C9C">
+        <thead>
+        <tr>
+            <th>Service</th>
+            <th>Text</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for service in services %}
+            <tr>
+                <td>{{ service.name }}</td>
+                <td>{{ service.PlainText }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

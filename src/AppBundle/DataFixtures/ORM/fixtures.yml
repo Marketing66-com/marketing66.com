@@ -5,3 +5,8 @@ AppBundle\Entity\Genus:
          speciesCount: <numberBetween(100, 100000)>
          funFact: <sentence()>
          isPublished: <boolean(75)>
+
+AppBundle\Entity\Service:
+  service_{1..10}:
+          name: <service()>
+          text: <text(20)>

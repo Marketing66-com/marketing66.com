@@ -22,7 +22,10 @@ class GenusController extends Controller //from framework bundle
 
 
 
-
+//    USE mydatabase;
+//SET FOREIGN_KEY_CHECKS = 0;
+//TRUNCATE matableavider;
+//SET FOREIGN_KEY_CHECKS = 1;
 
     /**
      * @Route("/genus/new")

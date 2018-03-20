@@ -55,4 +55,27 @@ class LoadFixtures implements FixtureInterface
         $key = array_rand($genera);
         return $genera[$key];
     }
+
+
+    public function service()
+    {
+        $genera = [
+            'Octopus',
+            'Balaena',
+            'Orcinus',
+            'Hippocampus',
+            'Asterias',
+            'Amphiprion',
+            'Carcharodon',
+            'Aurelia',
+            'Cucumaria',
+            'Balistoides',
+            'Paralithodes',
+            'Chelonia',
+            'Trichechus',
+            'Eumetopias'
+        ];
+        $key = array_rand($genera);
+        return $genera[$key];
+    }
 }
