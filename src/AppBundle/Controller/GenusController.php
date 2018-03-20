@@ -19,18 +19,7 @@ use Symfony\Component\HttpFoundation\Response;
 class GenusController extends Controller //from framework bundle
 {
 
-    /**
-     * @return Response
-     * @Route("")
-     * @Method("GET")
-     */
-    public function defaultAction()
-    {
 
-
-       return $this->render('genus/default.html.twig'
-    );
-    }
 
 
 
@@ -59,7 +48,7 @@ class GenusController extends Controller //from framework bundle
     {
         $em = $this->getDoctrine()->getManager();
         $genuses = $em->getRepository('AppBundle:Genus')
-            ->ffindAllPublishedOrderedBySize();
+            ->findAllPublishedOrderedBySize();
 
         return $this->render('genus/list.html.twig', [
             'genuses' => $genuses

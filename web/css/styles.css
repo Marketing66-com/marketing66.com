@@ -17,7 +17,7 @@ Flexbox Layout
 }
 
 .main-content {
-    min-height: 300px;
+    min-height: 100px;
 }
 
 .sea-creature-container {

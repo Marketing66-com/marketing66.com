@@ -19,7 +19,7 @@ services:
     AppBundle\:
         resource: '../../src/AppBundle/*'
         # you can exclude directories or files
-        # but if a service is unused, it's removed anyway
+        # but if a service is unused, it'css removed anyway
         exclude: '../../src/AppBundle/{Entity,Repository,Tests}'
 
     # controllers are imported separately to make sure they're public

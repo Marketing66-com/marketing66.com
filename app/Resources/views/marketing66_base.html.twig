@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Marketing66{% endblock %}</title>
+
+
+
+    {% block stylesheets %}
+
+
+
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/plugins/plugins.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/revolution/css/settings.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/revolution/css/layers.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/revolution/css/navigation.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('vendor/cubeportfolio/css/cubeportfolio.min.css') }}">
+
+
+    {% endblock %}
+
+
+
+</head>
+
+<body>
+
+<div id="preloader">
+    <div id="preloader-inner"></div>
+</div><!--/preloader-->
+
+
+
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-transparent bg-faded nav-sticky">
+
+    <div class="container">
+
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation";>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="marketing66.html">
+            <img class='logo logo-dark' src="{{ asset('images/images/logo-name.png') }}" alt="">
+        </a>
+        <div  id="navbarNavDropdown" class="navbar-collapse collapse" style="width:1000px;">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown active">
+                    <a class="nav-link  dropdown-toggle"  href="./marketing66-services.html">Services</a>
+
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link  dropdown-toggle"  href="#contenu-clients">Clients</a>
+
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link  dropdown-toggle"  href="#">Blog</a>
+
+                </li>
+                <li class="nav-item dropdown dropdown-full-width">
+                    <a class="nav-link dropdown-toggle"  href="#formlien" role="button" >
+                        Contact Us
+                    </a>
+
+                </li>
+                <li class="nav-item dropdown dropdown-full-width">
+                    <a class="nav-link  dropdown-toggle" href="#">Affiliates</a>
+                </li>
+            </ul>
+        </div>
+        <div class=" navbar-right-elements">
+
+
+
+        </div><!--right nav icons-->
+    </div>
+       <ul class="login">
+        <li class="login-icon"> <img   src="{{ asset('images/images/login-icon.png') }}" width="35%" height="35%" alt=""></li>
+        <li class="login-mot"> LOGIN</li>
+    </ul>
+</nav>
+
+
+
+
+<div class="main-content">
+    {% block body %}{% endblock %}
+</div>
+
+
+
+<div class="form" id="formlien" >
+    <div  style="height:50px;"></div>
+    <center> <h11>Get In Touch</h11></center>
+    <center> <p style="color:white; font-size:25px;margin-top:25px;">Team up with us and get the online attention you need.</p></center> <br><br>
+
+    <table style="width:55%;">
+        <tr>
+            <td style="width:50%;">
+                <input type="text" id="nom" placeholder="Full Name" style="width:98%; margin-bottom:3%;" />
+                <input type="tel" id="tel" placeholder="Phone Number" style="width:98%; margin-bottom:3%;" />
+            </td>
+            <td style="width:50%;"><textarea id="text" placeholder="How can we help you?" style="width:100%; margin-top:-2%"></textarea>   </td>
+        </tr>
+        <tr>
+            <td><input type="email" id="email" placeholder="Email Address" style="width:98%;"/></td>
+            <td style="width:50%;"><input id="bouton-send" type="submit" value="SEND"/>  </td>
+        </tr>
+
+    </table>
+
+
+    <div class="clearfix" style="margin-left:42.5%; margin-top:2%;">
+        <a href="#" class="social-icon-sm si-dark si-facebook si-dark-round">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a href="#" class="social-icon-sm si-dark si-twitter si-dark-round">
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a href="#" class="social-icon-sm si-dark si-g-plus si-dark-round">
+            <i class="fa fa-google-plus"></i>
+            <i class="fa fa-google-plus"></i>
+        </a>
+        <a href="#" class="social-icon-sm si-dark si-skype si-dark-round">
+            <i class="fa fa-skype"></i>
+            <i class="fa fa-skype"></i>
+        </a>
+        <a href="#" class="social-icon-sm si-dark si-linkedin si-dark-round">
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-linkedin"></i>
+        </a>
+    </div>
+
+</div>
+<div class="footer">
+    <div style="height:20px;"></div>
+    <span>&copy;<b>MARKETING 66 </b>- DIGITAL MARKETING EXPERTS. 2017. ALL RIGHTS RESERVED</span>
+</div>
+
+
+
+<!--/footer bottom-->
+<!--back to top-->
+<a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
+
+
+
+{% block javascripts %}
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="{{ asset('js/plugins/plugins.js') }}"></script>
+
+    <script src="{{ asset('js/assan.custom.js') }}"></script>
+
+    <script src="{{ asset('vendor/cubeportfolio/js/jquery.cubeportfolio.min.js') }}"></script>
+
+    <script src="{{ asset('vendor/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
+    <script src="{{ asset('vendor/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <script src="{{ asset('vendor/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
+    <script src="{{ asset('vendor/revolution/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+    <script src="{{ asset('vendor/revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+    <script src="{{ asset('vendor/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+    <script src="{{ asset('vendor/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
+    <script src="{{ asset('vendor/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+    <script src="{{ asset('vendor/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+    <script src="{{ asset('vendor/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+    <script src="{{ asset('vendor/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
+
+    <script type="text/javascript">
+        jQuery('a[href^="#"]').click(function(){
+            var the_id = jQuery(this).attr("href");
+            if (the_id === '#') {
+                return;
+            }
+            jQuery('html, body').animate({
+                scrollTop:jQuery(the_id).offset().top
+            }, 'slow');
+            return false;
+        });
+    </script>
+    {#<script>#}
+        {#/**Hero  script**/#}
+        {#var tpj = jQuery;#}
+
+        {#var revapi1078;#}
+        {#tpj(document).ready(function () {#}
+            {#if (tpj("#rev_slider_1078_1").revolution == undefined) {#}
+                {#revslider_showDoubleJqueryError("#rev_slider_1078_1");#}
+            {#} else {#}
+                {#revapi1078 = tpj("#rev_slider_1078_1").show().revolution({#}
+                    {#sliderType: "standard",#}
+                    {#jsFileLocation: "revolution/js/",#}
+                    {#sliderLayout: "auto",#}
+                    {#dottedOverlay: "none",#}
+                    {#delay: 8000,#}
+                    {#navigation: {#}
+                        {#arrows: {#}
+                            {#enable: true,#}
+                            {#style: 'uranus',#}
+                            {#tmp: '',#}
+                            {#rtl: false,#}
+                            {#hide_onleave: false,#}
+                            {#hide_onmobile: true,#}
+                            {#hide_under: 600,#}
+                            {#hide_over: 9999,#}
+                            {#hide_delay: 200,#}
+                            {#hide_delay_mobile: 1200,#}
+                            {#left: {#}
+                                {#container: 'slider',#}
+                                {#h_align: 'left',#}
+                                {#v_align: 'center',#}
+                                {#h_offset: 0,#}
+                                {#v_offset: 0#}
+                            {#},#}
+                            {#right: {#}
+                                {#container: 'slider',#}
+                                {#h_align: 'right',#}
+                                {#v_align: 'center',#}
+                                {#h_offset: 0,#}
+                                {#v_offset: 0#}
+                            {#}#}
+                        {#}#}
+                    {#},#}
+                    {#viewPort: {#}
+                        {#enable: true,#}
+                        {#outof: "pause",#}
+                        {#visible_area: "80%",#}
+                        {#presize: false#}
+                    {#},#}
+                    {#responsiveLevels: [1240, 1024, 778, 480],#}
+                    {#visibilityLevels: [1240, 1024, 778, 480],#}
+                    {#gridwidth: [1140, 992, 700, 465],#}
+                    {#gridheight: [600, 600, 500, 480],#}
+                    {#lazyType: "none",#}
+                    {#parallax: {#}
+                        {#type: "mouse",#}
+                        {#origo: "slidercenter",#}
+                        {#speed: 2000,#}
+                        {#levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50, 46, 47, 48, 49, 50, 55]#}
+                    {#},#}
+                    {#shadow: 0,#}
+                    {#spinner: "off",#}
+                    {#stopLoop: "off",#}
+                    {#stopAfterLoops: -1,#}
+                    {#stopAtSlide: -1,#}
+                    {#shuffle: "off",#}
+                    {#autoHeight: "off",#}
+                    {#hideThumbsOnMobile: "off",#}
+                    {#hideSliderAtLimit: 0,#}
+                    {#hideCaptionAtLimit: 0,#}
+                    {#hideAllCaptionAtLilmit: 0,#}
+                    {#debugMode: false,#}
+                    {#fallbacks: {#}
+                        {#simplifyAll: "off",#}
+                        {#nextSlideOnWindowFocus: "off",#}
+                        {#disableFocusListener: false#}
+                    {#}#}
+                {#});#}
+            {#}#}
+        {#});	/*ready*/#}
+        {#//cube portfolio init#}
+        {#(function ($, window, document, undefined) {#}
+            {#'use strict';#}
+
+            {#// init cubeportfolio#}
+            {#$('#js-grid-mosaic-flat').cubeportfolio({#}
+                {#filters: '#js-filters-mosaic-flat',#}
+                {#layoutMode: 'mosaic',#}
+                {#sortToPreventGaps: true,#}
+                {#mediaQueries: [{#}
+                    {#width: 1500,#}
+                    {#cols: 6#}
+                {#}, {#}
+                    {#width: 1100,#}
+                    {#cols: 4#}
+                {#}, {#}
+                    {#width: 800,#}
+                    {#cols: 3#}
+                {#}, {#}
+                    {#width: 480,#}
+                    {#cols: 2,#}
+                    {#options: {#}
+                        {#caption: '',#}
+                        {#gapHorizontal: 15,#}
+                        {#gapVertical: 15#}
+                    {#}#}
+                {#}],#}
+                {#defaultFilter: '*',#}
+                {#animationType: 'fadeOutTop',#}
+                {#gapHorizontal: 0,#}
+                {#gapVertical: 0,#}
+                {#gridAdjustment: 'responsive',#}
+                {#caption: 'fadeIn',#}
+                {#displayType: 'fadeIn',#}
+                {#displayTypeSpeed: 100,#}
+                {#// lightbox#}
+                {#lightboxDelegate: '.cbp-lightbox',#}
+                {#lightboxGallery: true,#}
+                {#lightboxTitleSrc: 'data-title',#}
+                {#lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',#}
+                {#plugins: {#}
+                    {#loadMore: {#}
+                        {#selector: '#js-loadMore-mosaic-flat',#}
+                        {#action: 'click',#}
+                        {#loadItems: 3#}
+                    {#}#}
+                {#}#}
+            {#});#}
+        {#})(jQuery, window, document);#}
+    {#</script>#}
+{% endblock %}
+
+
+
+</body>
+</html>
