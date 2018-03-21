@@ -171,7 +171,8 @@
     <script src="{{ asset('vendor/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
     <script src="{{ asset('vendor/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
     <script src="{{ asset('vendor/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
-
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
     <script type="text/javascript">
         jQuery('a[href^="#"]').click(function(){
             var the_id = jQuery(this).attr("href");

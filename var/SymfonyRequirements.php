@@ -140,7 +140,7 @@ class PhpIniRequirement extends Requirement
             $fulfilled = call_user_func($evaluation, $cfgValue);
         } else {
             if (null === $testMessage) {
-                $testMessage = sprintf('%css %css be %css in php.ini',
+                $testMessage = sprintf('%s %s be %s in php.ini',
                     $cfgName,
                     $optional ? 'should' : 'must',
                     $evaluation ? 'enabled' : 'disabled'
@@ -148,7 +148,7 @@ class PhpIniRequirement extends Requirement
             }
 
             if (null === $helpHtml) {
-                $helpHtml = sprintf('Set <strong>%css</strong> to <strong>%css</strong> in php.ini<a href="#phpini">*</a>.',
+                $helpHtml = sprintf('Set <strong>%s</strong> to <strong>%s</strong> in php.ini<a href="#phpini">*</a>.',
                     $cfgName,
                     $evaluation ? 'on' : 'off'
                 );
@@ -402,11 +402,11 @@ class SymfonyRequirements extends RequirementCollection
         if (false !== $requiredPhpVersion) {
             $this->addRequirement(
                 version_compare($installedPhpVersion, $requiredPhpVersion, '>='),
-                sprintf('PHP version must be at least %css (%css installed)', $requiredPhpVersion, $installedPhpVersion),
-                sprintf('You are running PHP version "<strong>%css</strong>", but Symfony needs at least PHP "<strong>%css</strong>" to run.
+                sprintf('PHP version must be at least %s (%s installed)', $requiredPhpVersion, $installedPhpVersion),
+                sprintf('You are running PHP version "<strong>%s</strong>", but Symfony needs at least PHP "<strong>%s</strong>" to run.
                 Before using Symfony, upgrade your PHP installation, preferably to the latest version.',
                     $installedPhpVersion, $requiredPhpVersion),
-                sprintf('Install PHP %css or newer (installed version is %css)', $requiredPhpVersion, $installedPhpVersion)
+                sprintf('Install PHP %s or newer (installed version is %s)', $requiredPhpVersion, $installedPhpVersion)
             );
         }
 
@@ -457,7 +457,7 @@ class SymfonyRequirements extends RequirementCollection
 
             $this->addRequirement(
                 isset($timezones[@date_default_timezone_get()]),
-                sprintf('Configured default timezone "%css" must be supported by your installation of PHP', @date_default_timezone_get()),
+                sprintf('Configured default timezone "%s" must be supported by your installation of PHP', @date_default_timezone_get()),
                 'Your default timezone is not supported by PHP. Check for typos in your <strong>php.ini</strong> file and have a look at the list of deprecated timezones at <a href="http://php.net/manual/en/timezones.others.php">http://php.net/manual/en/timezones.others.php</a>.'
             );
         }
@@ -540,7 +540,7 @@ class SymfonyRequirements extends RequirementCollection
                 create_function('$cfgValue', 'return $cfgValue > 100;'),
                 true,
                 'xdebug.max_nesting_level should be above 100 in php.ini',
-                'Set "<strong>xdebug.max_nesting_level</strong>" to e.g. "<strong>250</strong>" in php.ini<a href="#phpini">*</a> to stop Xdebug\'css infinite recursion protection erroneously throwing a fatal error in your project.'
+                'Set "<strong>xdebug.max_nesting_level</strong>" to e.g. "<strong>250</strong>" in php.ini<a href="#phpini">*</a> to stop Xdebug\'s infinite recursion protection erroneously throwing a fatal error in your project.'
             );
         }
 
@@ -616,7 +616,7 @@ class SymfonyRequirements extends RequirementCollection
         if (null !== $pcreVersion) {
             $this->addRecommendation(
                 $pcreVersion >= 8.0,
-                sprintf('PCRE extension should be at least version 8.0 (%css installed)', $pcreVersion),
+                sprintf('PCRE extension should be at least version 8.0 (%s installed)', $pcreVersion),
                 '<strong>PCRE 8.0+</strong> is preconfigured in PHP since 5.3.2 but you are using an outdated version of it. Symfony probably works anyway but it is recommended to upgrade your PCRE extension.'
             );
         }
@@ -690,13 +690,13 @@ class SymfonyRequirements extends RequirementCollection
             if (class_exists('Symfony\Component\Intl\Intl')) {
                 $this->addRecommendation(
                     \Symfony\Component\Intl\Intl::getIcuDataVersion() <= \Symfony\Component\Intl\Intl::getIcuVersion(),
-                    sprintf('intl ICU version installed on your system is outdated (%css) and does not match the ICU data bundled with Symfony (%css)', \Symfony\Component\Intl\Intl::getIcuVersion(), \Symfony\Component\Intl\Intl::getIcuDataVersion()),
+                    sprintf('intl ICU version installed on your system is outdated (%s) and does not match the ICU data bundled with Symfony (%s)', \Symfony\Component\Intl\Intl::getIcuVersion(), \Symfony\Component\Intl\Intl::getIcuDataVersion()),
                     'To get the latest internationalization data upgrade the ICU system package and the intl PHP extension.'
                 );
                 if (\Symfony\Component\Intl\Intl::getIcuDataVersion() <= \Symfony\Component\Intl\Intl::getIcuVersion()) {
                     $this->addRecommendation(
                         \Symfony\Component\Intl\Intl::getIcuDataVersion() === \Symfony\Component\Intl\Intl::getIcuVersion(),
-                        sprintf('intl ICU version installed on your system (%css) does not match the ICU data bundled with Symfony (%css)', \Symfony\Component\Intl\Intl::getIcuVersion(), \Symfony\Component\Intl\Intl::getIcuDataVersion()),
+                        sprintf('intl ICU version installed on your system (%s) does not match the ICU data bundled with Symfony (%s)', \Symfony\Component\Intl\Intl::getIcuVersion(), \Symfony\Component\Intl\Intl::getIcuDataVersion()),
                         'To avoid internationalization data inconsistencies upgrade the symfony/intl component.'
                     );
                 }
@@ -757,7 +757,7 @@ class SymfonyRequirements extends RequirementCollection
             $drivers = PDO::getAvailableDrivers();
             $this->addRecommendation(
                 count($drivers) > 0,
-                sprintf('PDO should have some drivers installed (currently available: %css)', count($drivers) ? implode(', ', $drivers) : 'none'),
+                sprintf('PDO should have some drivers installed (currently available: %s)', count($drivers) ? implode(', ', $drivers) : 'none'),
                 'Install <strong>PDO drivers</strong> (mandatory for Doctrine).'
             );
         }

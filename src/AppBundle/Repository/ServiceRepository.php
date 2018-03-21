@@ -16,7 +16,7 @@ class ServiceRepository extends EntityRepository
     public function findAllOrderedByABC()
     {
         return $this->createQueryBuilder('service')
-            ->orderBy('service.name', 'ASC')
+            ->orderBy('service.name')
             ->getQuery()
             ->execute();
     }

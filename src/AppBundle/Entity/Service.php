@@ -30,7 +30,7 @@ class Service
     /**
      * @ORM\Column(type="string")
      */
-    private $HighlighText;
+    private $HighlightText;
 
     /**
      * @return mixed
@@ -45,7 +45,7 @@ class Service
      */
     public function setPlainText($plain_text)
     {
-        $this->PlainText = plain_text;
+        $this->PlainText = $plain_text;
     }
 
     /**
@@ -53,7 +53,7 @@ class Service
      */
     public function getHighlightText()
     {
-        return $this->HighlighText;
+        return $this->HighlightText;
     }
 
     /**

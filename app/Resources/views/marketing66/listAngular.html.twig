@@ -1,0 +1,45 @@
+{% extends 'marketing66_base.html.twig' %}
+
+
+{% block body %}
+
+<div ng-app="myApp" ng-controller="myCtrl" ng-init="init( 'all' )" >
+ {% verbatim %}
+
+
+                <!--<h12>  {{services}} </h12>-->
+
+            <div ng-repeat="service in services" class="ASO-general" style="margin-left:25%;">
+                <div class="aso-image-title">
+                    <img ng-src={{service.img_url}}   width="75px" height="75px" alt="">
+                    <h12> {{ service.name}} </h12>
+                </div> <!--aso-image-title -->
+                <div class="text" style="color: white">
+                    {{ service._plain_text }}
+                    <br>
+                    <mark> <b> {{ service._highlight_text }}</b> </mark>
+                </div> <!--text -->
+
+            </div>
+
+            &nbsp;<br><br><br><br><br><br>
+
+
+
+{% endverbatim %}
+
+    </div>
+
+
+
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="{{ asset('js/services.js') }}"></script>
+
+{% endblock %}

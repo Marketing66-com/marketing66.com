@@ -2,21 +2,30 @@
 
 
 {% block body %}
-    <table class="table table-striped" style="background-color: #9C9C9C">
-        <thead>
-        <tr>
-            <th>Service</th>
-            <th>Text</th>
 
-        </tr>
-        </thead>
-        <tbody>
         {% for service in services %}
-            <tr>
-                <td>{{ service.name }}</td>
-                <td>{{ service.PlainText }}</td>
-            </tr>
+
+            <div class="ASO-general" style="margin-left:25%;">
+                <div class="aso-image-title">
+                    <img src="{{ asset(service.imgUrl) }}"   width="75px" height="75px" alt="">
+                    <h12> {{ service.name}} </h12>
+                </div> <!--aso-image-title -->
+                <div class="text" style="color: white">
+                    {{ service.PlainText }}
+                    <br>
+                    <mark> <b> {{ service.HighlightText }}</b> </mark>
+                </div> <!--text -->
+
+            </div>
+
+            &nbsp;<br><br><br><br><br><br>
+
+
+
+
+
+
+
         {% endfor %}
-        </tbody>
-    </table>
+
 {% endblock %}
