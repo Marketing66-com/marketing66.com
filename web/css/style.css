@@ -143,6 +143,10 @@ h6,
   -webkit-border-image:  -webkit-linear-gradient(left, #75ceec 0%,#73cfc2 100%);
   border-image: linear-gradient(to right, #75ceec 0%,#73cfc2 100%);
   border-image-slice: 1;
+
+  border-bottom-width: 0px;
+  padding-bottom: 0px;
+
 }
 
 
