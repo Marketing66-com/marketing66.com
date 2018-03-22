@@ -11,10 +11,10 @@
 
             <div ng-repeat="service in services" class="ASO-general" style="margin-left:25%;">
                 <div class="aso-image-title">
-                    <img ng-src={{service.img_url}}   width="75px" height="75px" alt="">
+                    <img ng-src="../{{service.img_url}}"   width="75px" height="75px" alt="">
                     <h12> {{ service.name}} </h12>
                 </div> <!--aso-image-title -->
-                <div class="text" style="color: white">
+                <div class="text" >
                     {{ service._plain_text }}
                     <br>
                     <mark> <b> {{ service._highlight_text }}</b> </mark>

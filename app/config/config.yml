@@ -10,7 +10,7 @@ parameters:
 
 framework:
     #esi: ~
-    #translator: { fallbacks: ['%locale%'] }
+    translator: { fallbacks: ['%locale%'] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -65,3 +65,14 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+fos_user:
+    ## Your configuration for FOS
+    db_driver: orm
+    firewall_name: main
+    user_class: userBundle\Entity\UserAdmin
+
+    ## To solve the problem
+    from_email:
+        address: "noreply@interactivecrypto.com"
+        sender_name: "No Reply"
