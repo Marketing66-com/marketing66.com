@@ -45,17 +45,17 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation";>
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="marketing66.html">
+        <a class="navbar-brand" href="{{ path('home') }}">
             <img class='logo logo-dark' src="{{ asset('images/images/logo-name.png') }}" alt="">
         </a>
         <div  id="navbarNavDropdown" class="navbar-collapse collapse" style="width:1000px;">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown active">
-                    <a class="nav-link  dropdown-toggle"  href="./marketing66-services.html">Services</a>
+                    <a class="nav-link  dropdown-toggle"  href="{{ path('services') }}">Services</a>
 
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link  dropdown-toggle"  href="#contenu-clients">Clients</a>
+                    <a class="nav-link  dropdown-toggle"  href="{{ path('home') }}#contenu-clients">Clients</a>
 
                 </li>
                 <li class="nav-item dropdown">
@@ -63,13 +63,13 @@
 
                 </li>
                 <li class="nav-item dropdown dropdown-full-width">
-                    <a class="nav-link dropdown-toggle"  href="#formlien" role="button" >
+                    <a class="nav-link dropdown-toggle"  href="{{ path('home') }}#formlien" role="button" >
                         Contact Us
                     </a>
 
                 </li>
                 <li class="nav-item dropdown dropdown-full-width">
-                    <a class="nav-link  dropdown-toggle" href="#">Affiliates</a>
+                    <a class="nav-link  dropdown-toggle" href="{{ path('affiliate') }}">Affiliates</a>
                 </li>
             </ul>
         </div>

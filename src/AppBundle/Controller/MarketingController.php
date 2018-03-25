@@ -37,7 +37,7 @@ class MarketingController extends Controller
     public function affiliateAction()
     {
         $genus = "hello";
-        return $this->render('marketing66/home.html.twig');
+        return $this->render('marketing66/affiliates.html.twig');
     }
     /**
      * @Route("/services",name="services")
