@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Genus</th>
+            <th>subFamily</th>
+            <th>speciesCount</th>
+            <th>funFact</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for genus in genuses %}
+            <tr>
+                <td>
+                    <a href="{{ path('genus_show', {'genusName': genus.name}) }}">
+                        {{ genus.name }}
+                    </a>
+                </td>
+            <td>{{ genus.subFamily }}</td>
+            <td>{{ genus.speciesCount }}</td>
+                <td>{{ genus.funFact }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

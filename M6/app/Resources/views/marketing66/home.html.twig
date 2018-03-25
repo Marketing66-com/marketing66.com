@@ -1,0 +1,135 @@
+{% extends 'marketing66_base.html.twig' %}
+
+{% block title %}Marketing66{% endblock %}
+
+
+
+{% block body  %}
+
+
+
+
+
+
+    <div style="position:relative; height:400px">
+        <div style="position:absolute;z-index:1">
+            <img src="{{ asset('images/images/background1.jpg') }}"  alt=""  width="100%" height="100%;" >
+        </div>
+        <div style="position:absolute;top:160px;z-index:2;width:100%;height:100%">
+            <center><h7> <b>Marketing66 </b> develops innovative content,<br> SEO and social media to boost<br> your performance</h7></center><br><br>
+            <center><button class="contact-us-button" type="button"  > Contact Us </button> </center>
+        </div>
+    </div>
+
+    <div class="fond-blanc"></div>
+
+
+    <table class="table-1">
+        <tr>
+            <th><img class='logo logo-dark' src="{{ asset('images/images/box-seo.png') }}"   alt="" width="300px", height="200px"></th>
+            <th><img class='logo logo-dark' src="{{ asset('images/images/box-aso.png') }}"   alt=""width="300px", height="200px" style="margin-top:90px;"></th>
+            <th><img class='logo logo-dark' src="{{ asset('images/images/box-ppc.png') }}"   alt=""width="300px", height="200px" ></th>
+            <th><img class='logo logo-dark' src="{{ asset('images/images/box-Affiliate.png') }}"   alt=""width="300px", height="200px" style="margin-top:90px;"></th>
+        </tr>
+    </table>
+
+
+
+
+
+
+    <div class="performance" id="performance">
+        <h6>We Deliver Performance</h6>
+        <table>
+            <tr>
+                <th><img class='logo-tel' src="{{ asset('images/images/icon1.jpg') }}"  alt="" width="200px", height="205px"></th>
+                <th><img class='logo-social' src="{{ asset('images/images/icon2.jpg') }}"  alt=""width="200px", height="205px"></th>
+                <th><img class='logo logo-dark' src="{{ asset('images/images/icon3.jpg') }}"  alt=""width="200px", height="205px"></th>
+                <th><img class='logo logo-dark' src="{{ asset('images/images/icon4.jpg') }}"  alt=""width="200px", height="205px"></th>
+            </tr>
+            <tr>
+                <th>Create App Store content to <br> <b>increase your downloads</b></th>
+                <th>Target social media to <br><b>develop your brand</b></th>
+                <th>Strategize advertising to <br><b>generate new clicks</b></th>
+                <th>Match your business to <br><b>the best global affiliates</b></th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="gettoclient" id="contenu-clients"></div>
+
+    <div style="position:relative">
+        <div style="position:absolute;">
+            <img id="aboutUs" src="{{ asset('images/images/about-us.jpg') }}"  alt="" height="400px" width="100%" >
+        </div>
+        <div style="position:absolute;width:100%;margin-top:20px;">
+            <center><h9 style="color:white ;font-size:50px; font-weight:700;"> About Us </h9></center>   <br>
+            <center ><p2 style="color:white"> <b>Marketing66 </b>is a global advertising firm with locations in New-York,<br> Paris and London.<br><br>
+                    We're a full-service firm and one of the few agencies to develop an <br> integrated online development package.</p2></center>
+        </div>
+
+    </div>
+
+
+
+    <div class="contenu-clients" >
+
+
+
+        <center><h10> Our Clients</h10></center>
+
+        <!-- Carousel -->
+        <div class="carousel-client owl-carousel owl-theme">
+            <div class="item text-center">
+
+                <img src="{{ asset('images/images/client1.png') }}"  alt="" class="img-fluid">
+            </div>
+            <div class="item text-center">
+
+                <img src="{{ asset('images/images/client2.png') }}"  alt="">
+            </div>
+            <div class="item text-center">
+
+                <img src="{{ asset('images/images/client3.png') }}" alt="">
+            </div>
+            <div class="item text-center">
+
+                <img src="{{ asset('images/images/client4.png') }}"  alt="">
+            </div>
+            <div class="item text-center">
+
+                <img src="{{ asset('images/images/client5.png') }}"  alt="">
+            </div>
+            <div class="item text-center">
+
+                <img src="{{ asset('images/images/client6.png') }}"  alt="">
+            </div>
+            <div class="item text-center">
+
+                <img src="{{ asset('images/images/client7.png') }}" alt="">
+            </div>
+            <div class="item text-center">
+
+                <img src="{{ asset('images/images/client8.png') }}" alt="">
+            </div>
+            <div class="item text-center">
+
+                <img src="{{ asset('images/images/client9.png') }}" alt="" class="">
+            </div>
+            <div class="item text-center">
+
+                <img src="{{ asset('images/images/client10.png') }}" alt="" class="">
+            </div>
+        </div> <!-- /Carousel -->
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+{% endblock %}
