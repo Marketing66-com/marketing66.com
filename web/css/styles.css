@@ -16,9 +16,8 @@ Flexbox Layout
     justify-content: flex-end;
 }
 
-.main-content {
-    min-height: 100px;
-}
+
+
 
 .sea-creature-container {
     flex-direction: column;

@@ -3,29 +3,29 @@
 
 {% block body %}
 
-        {% for service in services %}
+    {% for service in services %}
 
-            <div class="ASO-general" style="margin-left:25%;">
-                <div class="aso-image-title">
-                    <img src="{{ asset(service.imgUrl) }}"   width="75px" height="75px" alt="">
-                    <h12> {{ service.name}} </h12>
-                </div> <!--aso-image-title -->
-                <div class="text" style="color: white">
-                    {{ service.PlainText }}
-                    <br>
-                    <mark> <b> {{ service.HighlightText }}</b> </mark>
-                </div> <!--text -->
+        <div class="ASO-general" style="margin-left:25%;">
+            <div class="aso-image-title">
+                <img src="{{ asset(service.imgUrl) }}"   width="75px" height="75px" alt="">
+                <h12> {{ service.name}} </h12>
+            </div> <!--aso-image-title -->
+            <div class="text" style="color: white">
+                {{ service.PlainText }}
+                <br>
+                <mark> <b> {{ service.HighlightText }}</b> </mark>
+            </div> <!--text -->
 
-            </div>
+        </div>
 
-            &nbsp;<br><br><br><br><br><br>
-
-
+        &nbsp;<br><br><br><br><br><br>
 
 
 
 
 
-        {% endfor %}
+
+
+    {% endfor %}
 
 {% endblock %}
